@@ -53,10 +53,19 @@ import Foundation
 
 
 let pigOne:String = "Porky"
-let pigTwo = "Jackson"
+let pigTwo:String = "Jackson"
 var numberOfHouses:Int = 3
+var numberOfPigs:Int = 2
 var totalWeightOfPigs:Double = 3000.2
-var ifHouseIsDestroyed:Bool = false
+var isHouseIsDestroyed:Bool = true
+var isWolfHungry:Bool = false
+var isHouseMadeOfBrick:Bool = true
+let roadOne:String = "roadTwo"
+//let roadTwo:String = "roadTwo"
+//let roadThree:String = "roadThree"
+
+
+var myBirthMonth:Int = 6
 
 
 
@@ -64,10 +73,53 @@ func chapterOne() {
     print("Once upon a time there was 2 pigs. One was named \(pigOne) and the other was named \(pigTwo).They owned \(numberOfHouses) houses")
     
     numberOfHouses += 10
-    print("then they loss another \(numberOfHouses) and the pigs weighed \(totalWeightOfPigs). \(ifHouseIsDestroyed)")
+    print("then they loss another \(numberOfHouses) and the pigs weighed \(totalWeightOfPigs). \(isHouseIsDestroyed)")
+    
+    print("One day, there was a wolf that came to find a house and he found \(numberOfPigs) pigs")
+    print("The wolf instantly got hungry")
+    isWolfHungry = true
+    
+    if isHouseIsDestroyed && isWolfHungry {
+        print("The wolf ate \(pigTwo)")
+        numberOfPigs -= 1
+        print("now there are \(numberOfPigs) pigs left")
+    }
+    
+    else {
+        print("The wolf blow down the house")
+    }
     
   
+print("Then the wolf went to the next house down the street")
+print("The wolf then seen three roads")
+    
+    if roadOne == "roadOne" {
+        print("the wolf then goes down road one")
+    }
+    else if roadOne == "roadTwo"{
+        print("the wolf then went down road two")
+        
+    }
+    else {
+        print("the wolf went down all three roads")
+    }
+    
+    switch roadOne {
+    case "roadOne":
+        print("the wolf then goes down road one")
+    case "roadTwo":
+        print("the wolf then went down road two")
+    default:
+        print("the wolf went down all three roads")
+        
+    }
+    
+    
 
+
+    
+    
+    
  
     
 }
